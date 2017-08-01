@@ -50,6 +50,27 @@ public static final String LIMIT_REPR_2 = "^.+\\s+limit\\s+\\d+\\s*,\\s*(\\d+)$"
 
 ```
 
+最新更新：上述的正则表达式不能匹配带有格式（有空白符号和回车换行符的格式化语句）
+需要进行一些修改：
+
+```
+//Limit关键字匹配: limit 10
+public static final String LIMIT_REPR_1 = "^(.|\\s)+\\s+limit\\s+(\\d+)$";
+
+//Limit关键字匹配: limit 10,100
+public static final String LIMIT_REPR_2 = "^(.|\\s)+\\s+limit\\s+\\d+\\s*,\\s*(\\d+)$";
+```
+这组的正则表达式性能是极低的，复杂的sql基本上匹配会卡住非常非常长的时间
+
+继续优化：
+```
+//Limit关键字匹配: limit 10
+public static final String LIMIT_REPR_1 = "^(.|[ \\f\\n\\r\\t\\v])+\\s+limit\\s+(\\d+)$";
+
+//Limit关键字匹配: limit 10,100
+public static final String LIMIT_REPR_2 = "^(.|[ \\f\\n\\r\\t\\v])+\\s+limit\\s+\\d+\\s*,\\s*(\\d+)$";
+```
+实战中我也发现，正如上文中正则表达式优化所说的：`\s匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]。`，但是如果我们用\s来替换[ \f\n\r\t\v]，得到的表达式性能极差，但是如果我们换用确定性的[ \f\n\r\t\v]来替换，则性能则变得很好了，这也许就是Java正则表达式引擎做的优化手段吧？
 
 
 # 实现
@@ -62,10 +83,10 @@ public static final String LIMIT_REPR_2 = "^.+\\s+limit\\s+\\d+\\s*,\\s*(\\d+)$"
 public class QuerySqlLimiter {
 
 	//Limit关键字匹配: limit 10
-	public static final String LIMIT_REPR_1 = "^.+\\s+limit\\s+(\\d+)$";
+    public static final String LIMIT_REPR_1 = "^(.|[ \\f\\n\\r\\t\\v])+\\s+limit\\s+(\\d+)$";
 
-	//Limit关键字匹配: limit 10,100
-	public static final String LIMIT_REPR_2 = "^.+\\s+limit\\s+\\d+\\s*,\\s*(\\d+)$";
+    //Limit关键字匹配: limit 10,100
+    public static final String LIMIT_REPR_2 = "^(.|[ \\f\\n\\r\\t\\v])+\\s+limit\\s+\\d+\\s*,\\s*(\\d+)$";
 
 	private static Pattern p1 = Pattern.compile(LIMIT_REPR_1);
 	private static Pattern p2 = Pattern.compile(LIMIT_REPR_2);
