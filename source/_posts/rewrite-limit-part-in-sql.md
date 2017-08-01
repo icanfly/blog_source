@@ -112,14 +112,14 @@ public class QuerySqlLimiter {
 	}
 
 	private static String matchPatter_1(String querySql, int queryLimit) {
-		String result = resolveMatcher(querySql, queryLimit, p1.matcher(querySql.toLowerCase()), 1);
+		String result = resolveMatcher(querySql, queryLimit, p1.matcher(querySql.toLowerCase()), 2);
 		if (result != null)
 			return result;
 		return null;
 	}
 
 	private static String matchPatter_2(String querySql, int queryLimit) {
-		String result = resolveMatcher(querySql, queryLimit, p2.matcher(querySql.toLowerCase()), 1);
+		String result = resolveMatcher(querySql, queryLimit, p2.matcher(querySql.toLowerCase()), 2);
 		if (result != null)
 			return result;
 		return null;
