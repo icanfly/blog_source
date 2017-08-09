@@ -24,6 +24,8 @@ Ambari是由Hortonworks公司出品一款大数据平台管理软件，它将大
 
 Presto官方为Ambari提供了一个presto的插件，插件地址：[Ambari-Presto-Service](https://github.com/prestodb/ambari-presto-service)，该插件遵循Ambari的插件体系规范，可以集成到Ambari提供Presto的管理功能。
 
+官方提供了一个Presto的Ambari插件集成[文档地址](https://prestodb.io/ambari-presto-service/getting-started.html#)，指明了如何将插件集成到Ambari中，该文档有点旧，只能是对照着大致看下，帮助理解。
+
 官方的Presto存在在Ambari界面上对Presto进行重启会失败的问题,该问题由几个小问题组成，我都对其进行了修复。
 
 > 多提一句的是：官方对于这个Ambari的插件的维护似乎并不上心，该插件最新的更新时间已经是7个月以前，而且最新的改动只是一个微小改动。所以，在官方网站上并不能找到相关的解决办法及修复，所有的所有只能是靠自己去理解Ambari插件的运行原理并根据思考去尝试修复。
