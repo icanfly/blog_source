@@ -18,6 +18,8 @@ Ambari是由Hortonworks公司出品一款大数据平台管理软件，它将大
 
 <!-- more -->
 
+{% asset_img 432E0D4D-7C6B-4374-8FCB-AE10016546D1.png %}
+
 # 问题
 
 Presto官方为Ambari提供了一个presto的插件，插件地址：[Ambari-Presto-Service](https://github.com/prestodb/ambari-presto-service)，该插件遵循Ambari的插件体系规范，可以集成到Ambari提供Presto的管理功能。
