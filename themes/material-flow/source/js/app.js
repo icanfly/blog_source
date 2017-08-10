@@ -197,6 +197,34 @@ var customSearch;
 	// 	}
 	// }
 
+	function fancybox(){
+		$('.article-entry').each(function(i){
+	    $(this).find('img').each(function(){
+	      if ($(this).parent().hasClass('fancybox')) return;
+	      if ($(this).parent().parent().hasClass('entry-thumbnail')) return;
+
+	      var alt = this.alt;
+
+	      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+
+	      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+	    });
+
+	    $(this).find('.fancybox').each(function(){
+	      $(this).attr('rel', 'article' + i);
+	    });
+	  });
+
+	  if ($.fancybox){
+	    $('.fancybox').fancybox({
+	    	'hideOnContentClick': true,
+	    	'overlayShow'   :   false,
+	    	'autoScale': true,
+	    	'margin-top': 500
+	    });
+	  }
+	}
+
 
 	$(function () {
 		//set header
@@ -209,6 +237,7 @@ var customSearch;
 		setTocToggle();
 		// getHitokoto();
 		// getPicture();
+		fancybox();
 
 
 		$(".article .video-container").fitVids();
