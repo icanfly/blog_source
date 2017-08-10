@@ -9,6 +9,7 @@ description: 侠客行舟|技术博客|Java|分布式|架构|大数据
 author: LPNOTE
 language: zh-CN
 timezone: Asia/Chongqing
+favicon: /favicon.ico
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'

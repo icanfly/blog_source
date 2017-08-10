@@ -6,7 +6,7 @@
   	<a href="<%- url_for(post.path) %>">
     	<%= post.title %>
     </a>
-  </h2>
+    </h2>
 	<time>
 	  <%= date(post.date, 'MMM D, YYYY') %>
 	</time>
@@ -29,15 +29,13 @@
 	 <!--
 	 <div>        
 		<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-		    <a href="#" class="fancybox" rel="group"><img id="wechat_subscriber_qcode" src="#" alt="汤诚 wechat" style="width: 200px; max-width: 100%"></a>
+		    <a href="#" class="fancybox" rel="group"><img id="wechat_subscriber_qcode" src="#" alt="wechat" style="width: 200px; max-width: 100%"></a>
 		    <div>欢迎订阅我的微信公众号</div>
 		</div>
     </div>
     -->
     <!-- 打赏 -->
     <div>
-      
-        
 		  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
 		    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
 		    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}" 
@@ -82,9 +80,6 @@
 		      
 		    </div>
 		  </div>
-
-
-      
     </div>
 
     <!-- 版本申明 -->

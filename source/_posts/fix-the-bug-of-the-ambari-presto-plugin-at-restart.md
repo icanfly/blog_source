@@ -157,4 +157,8 @@ def start(self, env):
 
 通过这次的问题排查，对于Ambari的插件体系也有一个大致的认识，也增强了自己问题排查、分析、解决问题的能力。对于Ambari Presto插件的修改我也会积极反馈至开源社区，提交相关ISSUE和PR，希望能得到社区的接纳。^_^
 
+提交的社区ISSUE: [ISSUE-28](https://github.com/prestodb/ambari-presto-service/issues/28)
+
+我的修复PR: [PULL-29](https://github.com/prestodb/ambari-presto-service/pull/29)
+
 
