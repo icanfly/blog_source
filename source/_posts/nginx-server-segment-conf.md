@@ -3,7 +3,8 @@ date: 2014-08-06
 
 tags: 
  - nginx
-
+cateogries:
+ - 服务器
 ---
 
 ```xml

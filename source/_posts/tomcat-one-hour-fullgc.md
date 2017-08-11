@@ -4,6 +4,8 @@ date: 2014-08-20
 tags:
  - tomcat
  - gc
+categories:
+ - 问题解析
 
 ---
 

@@ -3,7 +3,8 @@ date: 2015-04-07
 
 tags: 
  - java
-
+categories:
+ - 问题解析
 ---
 
 检查一下主机名配置,以及host文件或者DNS解析,可能Context.PROVIDER_URL需要域名而不能使用ip

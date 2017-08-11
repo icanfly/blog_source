@@ -3,6 +3,8 @@ date: 2016-05-26 09:04:00
 tags:
  - nginx
  - apache
+categories:
+ - 工具/类库
 ---
 
 经常使用nginx、apache时候需要对某个ip段进行白名单或黑名单控制，而它的配置是以CIDR的方式进行的，所以此工具可以方便的做到从IP段到CIDR的转换。

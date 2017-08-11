@@ -5,6 +5,8 @@ tags:
  - HIVE
  - 大数据
  - bug
+categories:
+ - 大数据
 
 ---
 

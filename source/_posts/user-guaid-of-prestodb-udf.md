@@ -4,6 +4,8 @@ date: 2017-01-19 17:51:04
 tags:
 - 大数据
 - presto
+categories:
+ - 大数据
 ---
 
 # Presto 自定义函数开发（译）

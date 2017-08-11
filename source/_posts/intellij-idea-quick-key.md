@@ -4,7 +4,8 @@ date: 2013-09-26
 tags:
  - IDE
  - IDEA
-
+categories:
+ - 工具/类库
 ---
 
 1. Ctrl + Space  

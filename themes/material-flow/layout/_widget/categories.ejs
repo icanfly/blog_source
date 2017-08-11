@@ -4,7 +4,9 @@
     <% if (site.categories.length){ %>
     <ul class="entry">
     <% site.categories.sort('name').each(function(item){ %>
+        <% if (item.parent == null) { %>
         <li><a class="flat-box" href="<%= url_for(item.path) %>"><div class='name'><%= item.name %></div><div class='badget'><%= item.posts.length %></div></a></li>
+        <% } %>
     <% }); %>
     </ul>
     <% } %>

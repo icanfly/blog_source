@@ -3,6 +3,8 @@ date: 2013-12-04
 
 tags:
  - linux
+categories:
+ - 工具/类库
 ---
 linux 下，我们常使用 cd ,grep,vi 等命令，有时候我们要查到这些命令所在的位置，如何做呢？
 

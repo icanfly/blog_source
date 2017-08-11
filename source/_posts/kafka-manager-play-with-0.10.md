@@ -4,7 +4,8 @@ date: 2017-01-12
 tags:
  - kafka
  - 大数据
-
+categories:
+ - 大数据
 ---
 
 

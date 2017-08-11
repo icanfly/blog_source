@@ -4,7 +4,10 @@ tags:
  - presto
  - OOM
  - GC
-
+ - 大数据
+categories:
+ - 大数据
+ - 问题解析
 ---
 
 # 问题

@@ -7,7 +7,8 @@ tags:
  - 大数据
  - 最佳实践
  - hortonworks
-
+categories:
+ - 大数据
 ---
 
 HDFS对于任何Hadoop大数据平台来说都是核心组成部分，为了加强对Hadoop平台的数据保护，将安全控制深入到HDFS层是非常有必要的。HDFS本身提供了Kerberos认证，并且提供了基于POSIX风格的权限和HDFS——ACL控制，当然它也可以使用基于Apache Ranger的权限控制体系。

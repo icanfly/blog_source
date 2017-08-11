@@ -5,7 +5,8 @@ tags:
  - SpringBoot
  - Spring
  - 问题解析
-
+categories:
+ - 问题解析
 ---
 
 在以往的开发过程中，Spring体系的文件上传一直使用的是commons-fileupload，在我们的项目中也是一样的，这两天在做公司的大数据查询平台，其中在做大文件上传时遇到了一些问题，记录如下：

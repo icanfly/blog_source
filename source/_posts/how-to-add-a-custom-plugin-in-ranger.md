@@ -4,6 +4,8 @@ date: 2017-01-23 14:58:20
 tags:
 - 大数据
 - ranger
+categories:
+ - 大数据
 ---
 
 >英文链接：https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=53741207

@@ -4,7 +4,8 @@ date: 2017-06-01
 tags:
  - presto
  - 大数据
-
+categories:
+ - 大数据
 ---
 
 # Presto的运行机制

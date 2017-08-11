@@ -4,6 +4,8 @@ tags:
  - presto
  - 大数据
  - yarn
+categories:
+ - 大数据
 
 ---
 

@@ -3,6 +3,8 @@ title: RPM查询用法（转）
 tags:
  - rpm
  - linux
+categories:
+ - 工具/类库
 
 date: 2016-03-05 18:34:00
 
