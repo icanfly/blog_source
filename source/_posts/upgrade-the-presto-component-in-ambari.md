@@ -143,7 +143,7 @@ presto_cli_url = http://search.maven.org/remotecontent?filepath=com/facebook/pre
 
 因为Ambari主控机上安装的Presto插件版本比较旧，且官方并没有怎么进行维护，有一些潜在的问题。这里我们需要对该Presto插件目录进行更新修复一些问题。
 
-具体的修复过程，参见另一篇文章：[修复ambari presto插件在重启时的BUG](http://localhost:4000/2017/08/09/fix-the-bug-of-the-ambari-presto-plugin-at-restart/)
+具体的修复过程，参见另一篇文章：[修复ambari presto插件在重启时的BUG](/2017/08/09/fix-the-bug-of-the-ambari-presto-plugin-at-restart/)
 
 将修复过后的文件夹拷贝至Ambari的插件目录(通常位于/var/lib/ambari-server/resources/stacks/HDP/2.5/services下，2.5为当前HDP的版本信息)替换原有的PRESTO目录。
 
