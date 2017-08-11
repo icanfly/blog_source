@@ -218,9 +218,8 @@ var customSearch;
 	  if ($.fancybox){
 	    $('.fancybox').fancybox({
 	    	'hideOnContentClick': true,
-	    	'overlayShow'   :   false,
 	    	'autoScale': true,
-	    	'margin-top': 500
+	    	'overlayShow': false
 	    });
 	  }
 	}
