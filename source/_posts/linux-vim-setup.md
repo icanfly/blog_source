@@ -6,7 +6,7 @@ tags:
  - linux
  - vim
 categories:
- - 工具/类库
+ - 转载文章
 ---
 
 yum install vim-X11 vim-common vim-enhanced vim-minimal

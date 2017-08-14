@@ -5,7 +5,7 @@ tags:
 - 大数据
 - presto
 categories:
- - 大数据
+ - 翻译文章
 ---
 
 # Presto 自定义函数开发（译）

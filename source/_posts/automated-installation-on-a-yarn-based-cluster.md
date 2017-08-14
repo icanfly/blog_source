@@ -5,7 +5,7 @@ tags:
  - 大数据
  - yarn
 categories:
- - 大数据
+ - 翻译文章
 
 ---
 

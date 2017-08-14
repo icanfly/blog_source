@@ -5,7 +5,7 @@ tags:
  - virtualbox
  - ubuntu
 categories:
- - 工具/类库
+ - 转载文章
 
 ---
 

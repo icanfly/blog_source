@@ -5,7 +5,7 @@ tags:
  - 大数据
  - solr
 categories:
- - 大数据
+ - 翻译文章
 
 ---
 

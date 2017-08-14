@@ -4,7 +4,7 @@ tags:
  - rpm
  - linux
 categories:
- - 工具/类库
+ - 转载文章
 
 date: 2016-03-05 18:34:00
 

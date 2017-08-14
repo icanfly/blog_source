@@ -5,7 +5,7 @@ tags:
  - IDE
  - IDEA
 categories:
- - 工具/类库
+ - 转载文章
 ---
 
 1. Ctrl + Space  

@@ -5,7 +5,7 @@ date: 2015-12-30 20:28:00
 tags:
  - guava
 categories:
- - 问题解析
+ - 原创文章
 ---
 
 这里讲述是的google的Guava类库中的一个需要注意的问题，如下：
