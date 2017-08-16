@@ -29,6 +29,9 @@ menu:
   - name: Archives
     slug: archives
     url: /archives
+  - name: Participants
+    slug: participants
+    url: /participate
   - name: About
     slug: about
     url: /about
