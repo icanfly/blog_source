@@ -32,6 +32,9 @@ menu:
   - name: Participants
     slug: participants
     url: /participate
+  - name: Reference
+    slug: git
+    url: /reference
   - name: About
     slug: about
     url: /about
