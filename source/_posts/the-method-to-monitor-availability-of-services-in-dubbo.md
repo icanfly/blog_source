@@ -1,4 +1,4 @@
-title: dubbo泛化调用遇到回声测试
+title: dubbo服务可用性监控手段
 date: 2016-06-20
 tags:
  - dubbo
@@ -132,7 +132,7 @@ map.put("password", "yyy");
 
 通过泛化引用与回声测试两者结合，刚好能满足我们的监控需求，监控平台通过注册中心获取所有的服务接口，并通过泛化引用方式引用服务，并调用服务的回声接口测试可用性。
 
-一切看起来都那么美好，但是现实总是那么残酷。对于Dubbo目前的处境来说，泛化引用和回声测试同时使用时会产生不兼容，究其原因是因为：`Dubbo的泛化引用调用和回声测试是两个不同的Filter，而它们有先后顺序，回声测试的Filter优先于泛化引用调用Filter的执行，在泛化引用调用的Filter中并没有对回声测试调用进行回应`
+一切看起来都那么美好，但是现实总是那么残酷。对于Dubbo目前的处境来说，泛化引用和回声测试同时使用时会产生不兼容，究其原因是因为：`Dubbo的泛化引用调用和回声测试是两个不同的Filter，泛化调用Filter被用于客户端执行，而回声测试被用于服务端，在进行回声测试时并没有对泛化调用进行回应`
 
 
 # 冲突分析
@@ -302,9 +302,9 @@ public class GenericImplFilter implements Filter {
 
 解决冲突有两种方式：
 
-- 修改泛化引用调用Filter，并对回声测试进行处理
+- 修改回声测试调用Filter，并对泛化调用进行处理
 
-- 增加新自定义的Filter，并且排在泛化调用Filter之前对泛化调用中的回声测试进行处理返回。
+- 增加新自定义的Provider端Filter，并且排在回声调用Filter之前对泛化调用中的回声测试进行处理返回。
 
 由于Dubbo的扩展性做得非常棒，这里只需要自己定义一个Filter来实现就可以了：
 
@@ -336,11 +336,14 @@ public class GenericEchoFilter implements Filter {
     }
 }
 ```
+
+注意以上的`order`属性值要大于回声测试Filter中的order值，这样才能保证先于回声测试就进行响应。
+
 添加了这个后需要在自己的工程或者工具jar包META-INF/dubbo/下新增filter设定文件com.alibaba.dubbo.rpc.Filter，内容如下：
 ```
 genericecho=com.xxx.dubbo.filter.GenericEchoFilter
 ```
-这样操作过后，Dubbo在启动时会自动扫描和加载自定义的Filter，这样我们的自定义Filter就自动生效了。
+这样操作过后，Dubbo在启动时会通过SPI方式自动扫描和加载自定义的Filter，这样我们的自定义Filter就自动生效了。
 
 # 总结
 
