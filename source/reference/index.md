@@ -7,3 +7,5 @@ date: 2013
 
 - [Dubbo参考手册](http://dubbo.io/)
 
+- [CORS协议解读](http://www.ruanyifeng.com/blog/2016/04/cors.html)
+
