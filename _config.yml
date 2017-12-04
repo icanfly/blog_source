@@ -73,6 +73,7 @@ baidusitemap:
 ## Themes: https://hexo.io/themes/
 theme: material-flow
 
+#theme: hexo-theme-xups
 disqus_shortname: lpnote-com
 
 archive_generator:
