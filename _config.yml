@@ -71,9 +71,9 @@ baidusitemap:
   path: baidusitemap.xml
 
 ## Themes: https://hexo.io/themes/
-theme: material-flow
+#theme: material-flow
 
-#theme: hexo-theme-xups
+theme: hexo-theme-xups
 disqus_shortname: lpnote-com
 
 archive_generator:
