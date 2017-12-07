@@ -15,7 +15,7 @@ menu:
   about:
     name: 归档
     link: /archives/
-    icon: icon-about
+    icon: icon-lab
   comment:
     name: 留言
     link: /comment/
