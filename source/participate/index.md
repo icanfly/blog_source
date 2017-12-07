@@ -2,7 +2,7 @@ title: 参与开源
 date: 2013
 ---
 
-以下列出的是我参与开源的一些记录：
+参与开源的一些记录：
 
 - [Presto: Fix 'restart presto failed in Ambari 2.5' and Upgrade version of presto component](https://github.com/prestodb/ambari-presto-service/pull/29)
 

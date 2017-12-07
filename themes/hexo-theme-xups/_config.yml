@@ -13,8 +13,8 @@ menu:
     link: /
     icon: icon-home
   about:
-    name: 关于
-    link: /about/
+    name: 归档
+    link: /archives/
     icon: icon-about
   comment:
     name: 留言
@@ -43,7 +43,7 @@ favicon: /favicon.ico
 #----------------------------
 # 头像url
 #----------------------------
-avatar: /img/jelon.jpg
+avatar: /favicon.ico
 
 #----------------------------
 # 是否开启分享
@@ -106,11 +106,11 @@ head_links:
         link: https://pages.coding.me
     sub:
       sinaweibo:
-        name: 新浪微博
-        link: http://weibo.com/#
+        name: 参与开源
+        link: /participate
       qqweibo:
-        name: Facebook
-        link: https://www.facebook.com/#
+        name: 关于我
+        link: /about
 #----------------------------
 # SEO
 #----------------------------
