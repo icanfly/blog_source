@@ -5,7 +5,7 @@ tags:
  - 算法
 categories:
  - leetcode
-
+thumbnail: /images/leetcode.png
 ---
 
 给定二进制搜索树和目标数字，如果BST中存在两个元素，使得它们的和等于给定的目标，则返回true。
@@ -13,7 +13,7 @@ categories:
 Example 1:
 
 Input:
-        
+
           5
           / \
          3   6
@@ -28,8 +28,8 @@ Output: True
 Example 2:
 
 
-Input: 
-            
+Input:
+
            5
            / \
           3   6
@@ -60,7 +60,7 @@ class Solution {
     public boolean findTarget(TreeNode root, int k) {
         return traval(root,root,k);
     }
-    
+
     /**
     * 进行遍历，root用于在遍历和搜索中透传，node为要遍历的节点，k为target值
     **/
@@ -76,10 +76,10 @@ class Solution {
                 return true;
             }
         }
-        
+
         return false;
     }
-    
+
     /**
     * 搜索node节点及其子节点中是否有值和val相等，并且节点不为src
     **/

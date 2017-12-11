@@ -9,6 +9,7 @@ tags:
  - hortonworks
 categories:
  - 翻译文章
+thumbnail: /images/bigdata.png
 ---
 
 HDFS对于任何Hadoop大数据平台来说都是核心组成部分，为了加强对Hadoop平台的数据保护，将安全控制深入到HDFS层是非常有必要的。HDFS本身提供了Kerberos认证，并且提供了基于POSIX风格的权限和HDFS——ACL控制，当然它也可以使用基于Apache Ranger的权限控制体系。
@@ -61,7 +62,7 @@ Ranger的用户界面可以让管理者非常容易地找到用户的授权关�
 
 在HDFS中默认的掩码为022，在这种情况下，所有的用户都具有所有HDFS文件系统文件和文件夹的读取权限。 你可以通过以下命令进行检查：
 
-> 
+>
 $ hdfs dfs -ls /apps
 Found 3 items
 drwxrwxrwx   – falcon hdfs       0 2015-11-30 08:02 /apps/falcon
@@ -71,7 +72,7 @@ drwxr-xr-x   – hdfs   hdfs           0 2015-11-30 08:01 /apps/hive
 - 指定哪些目录由Ranger授权
 
 <b>建议这些目录由Ranger来进行管理和授权（/app/hive,/apps/Hbase以及一些自定义的数据目录）</b> HDFS本身的授权模型对于这些需求来说显得捉襟见肘。 可以使用chmod修改默认权限，例如：
-> 
+>
 $ hdfs dfs -chmod -R 000 /apps/hive
 $ hdfs dfs -chown -R hdfs:hdfs /apps/hive
 $ hdfs dfs -ls /apps/hive
@@ -83,7 +84,7 @@ Ranger可以给用户进行显式的授权，例如：
 
 管理员可以照着这个图对其它目录进行用户授权，你可以通过以下方式进行授权验证：
  - Connect to HiveServer2 using beeline
- - Create a table 
+ - Create a table
   - create table employee( id int, name String, ssn String);
  - Go to ranger, and check the HDFS access audit. The enforcer should be ‘ranger-acl’
 
@@ -98,7 +99,7 @@ drwxrwx—   – ambari-qa hdfs          0 2015-11-30 07:56 /user/ambari-qa
 drwxr-xr-x   – hcat      hdfs          0 2015-11-30 08:01 /user/hcat
 drwxr-xr-x   – hive      hdfs          0 2015-11-30 08:01 /user/hive
 drwxrwxr-x   – oozie     hdfs          0 2015-11-30 08:02 /user/oozie
- 
+
 
 > $ hdfs dfs -chmod -R 700 /user/*
 $ hdfs dfs -ls /user
@@ -118,6 +119,3 @@ drwx——   – oozie     hdfs          0 2015-11-30 08:02 /user/oozie
 保证HDFS的安全性是保证Hadoop安全性的起点。 Ranger为HDFS提供了一个集中统一管理安全策略的接口。建议管理员合理使用Ranger以及HDFS本身的权限机制来全程覆盖HDFS的授权管理。
 
 本文英文原文：https://hortonworks.com/blog/best-practices-in-hdfs-authorization-with-apache-ranger/
-
-  
-  

@@ -6,7 +6,7 @@ tags:
  - solr
 categories:
  - 翻译文章
-
+thumbnail: /images/solr.png
 ---
 
 本文原文：[Solr TTL - Auto-Purging Solr Documents & Ranger Audits](https://community.hortonworks.com/articles/63853/solr-ttl-auto-purging-solr-documents-ranger-audits.html)
@@ -59,8 +59,8 @@ _ttle_定义为：+2HOURS
 
 ```
 mkdir /opt/lucidworks-hdpsearch/solr_collections
-mkdir /opt/lucidworks-hdpsearch/solr_collections/films 
-chown -R solr:solr /opt/lucidworks-hdpsearch/solr_collections 
+mkdir /opt/lucidworks-hdpsearch/solr_collections/films
+chown -R solr:solr /opt/lucidworks-hdpsearch/solr_collections
 cp -R /opt/lucidworks-hdpsearch/solr/server/solr/configsets/basic_configs/conf /opt/lucidworks-hdpsearch/solr_collections/films
 ```
 
@@ -167,9 +167,9 @@ cp -R /opt/lucidworks-hdpsearch/solr/server/solr/configsets/basic_configs/conf /
 
 ```
 /opt/lucidworks-hdpsearch/solr/server/scripts/cloud-scripts/zkcli.sh -zkhost horton0.example.com:2181/solr -cmd upconfig -confname films -confdir /opt/lucidworks-hdpsearch/solr_collections/films/conf
- 
+
 curl --negotiate -u : "http://horton0.example.com:8983/solr/admin/collections?action=CREATE&name=films&numShards=1"
- 
+
 curl --negotiate -u : ' http://horton0.example.com:8983/solr/films/update/json?commit=true' --data-binary @/opt/lucidworks-hdpsearch/solr/example/films/films.json -H 'Content-type:application/json'
 ```
 
@@ -327,5 +327,3 @@ http://horton0.example.com:8983/solr/films/update?commit=true&stream.body=<delet
 
 - [https://lucene.apache.org/solr/5_3_0/solr-core/org/apache/solr/update/processor/DocExpirationUpdateProcessorFactory.html](https://lucene.apache.org/solr/5_3_0/solr-core/org/apache/solr/update/processor/DocExpirationUpdateProcessorFactory.html)
 - [https://cwiki.apache.org/confluence/display/solr/Update+Request+Processors](https://cwiki.apache.org/confluence/display/solr/Update+Request+Processors)
-
-

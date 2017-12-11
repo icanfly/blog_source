@@ -5,6 +5,7 @@ tags:
  - maven
 categories:
  - 原创文章
+thumbnail: /images/maven.png
 ---
 
 在使用mvn package进行编译、打包时，Maven会执行src/test/java中的JUnit测试用例，有时为了跳过测试，会使用参数-DskipTests和-Dmaven.test.skip=true，这两个参数的主要区别是：

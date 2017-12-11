@@ -1,10 +1,11 @@
 title: nginx server节配置
 date: 2014-08-06
 
-tags: 
+tags:
  - nginx
 cateogries:
  - 转载文章
+thumbnail: /images/nginx.png
 ---
 
 ```xml
@@ -20,7 +21,7 @@ server {
         proxy_set_header X-Forwarded-For $remote_addr;
         proxy_pass http://127.0.0.1:8080/test/;
     }
- 
+
 #    rewrite ^/(.*)$     http://www.test.com/abc.htm$1;
 }
 ```

@@ -7,7 +7,7 @@ tags:
  - bug
 categories:
  - 原创文章
-
+thumbnail: /images/bigdata.png
 ---
 
 # 需求背景
@@ -102,5 +102,3 @@ We can not make the HiveStatement thread safe, but we should at least make sure 
 # 总结
 
 目前看来，此方案并没有完美，HiveStatement存在线程安全问题，不过我们应该可以暂时忍受一些线程不同步带来的很多问题，毕竟只是一个日志显示的问题，哪怕出错，报出什么异常，我们也可以暂时用粗暴的方式来解决：一旦出现异常就直接把该Statement的日志获取给停掉。
-
-

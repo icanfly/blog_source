@@ -1,11 +1,12 @@
 ---
 title: kafka顺序消息
 date: 2017-01-17 12:49:43
-tags: 
+tags:
 - kafka
 - 大数据
 categories:
  - 原创文章
+thumbnail: /images/kafka.png
 ---
 
 顺序消息包括以下两方面：

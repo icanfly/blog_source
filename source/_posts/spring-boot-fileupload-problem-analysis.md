@@ -8,6 +8,7 @@ tags:
  - 参与开源
 categories:
  - 原创文章
+thumbnail: /images/springboot.png
 ---
 
 在以往的开发过程中，Spring体系的文件上传一直使用的是commons-fileupload，在我们的项目中也是一样的，这两天在做公司的大数据查询平台，其中在做大文件上传时遇到了一些问题，记录如下：
@@ -115,7 +116,7 @@ if (MultiPartInputStreamParser.this._config.getFileSizeThreshold() > 0 && _size 
 官方回复了，确实存在这样的问题：
 
 > This is somewhat complicated as the behaviour with a value of zero varies by container:
-> 
+>
 > Tomcat will write to disk immediately
 > Jetty will never write to disk
 > Undertow ignores the file size threshold entirely
@@ -165,9 +166,3 @@ spring.http.enabled=false
 ## 关于怀疑精神
 
 任何时候都要对开源精神充满敬畏，同时少不了怀疑探索精神！
-
-
-
-
-
-

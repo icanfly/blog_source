@@ -6,6 +6,7 @@ tags:
 - ranger
 categories:
  - 翻译文章
+thumbnail: /images/bigdata.png
 ---
 
 >英文链接：https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=53741207
@@ -160,7 +161,7 @@ YARN服务需要授权服务实现`YarnAuthorizationProvider`接口。 Ranger YA
 ```java
 public class RangerYarnAuthorizer extends YarnAuthorizationProvider {
    	private static RangerBasePlugin plugin = null;
-   
+
     @Override
 	public void init(Configuration conf) {
 		  plugin = new RangerBasePlugin("yarn", "yarn");
@@ -172,7 +173,7 @@ public class RangerYarnAuthorizer extends YarnAuthorizationProvider {
 	public boolean checkPermission(AccessType accessType, PrivilegedEntity entity, UserGroupInformation ugi) {
 		  RangerAccessRequestImpl request  = new RangerAccessRequestImpl();
 		  RangerResourceImpl      resource = new RangerResourceImpl();
-		 
+
 		  resource.setValue("queue", entity.getName());
 		   request.setResource(resource);
 		   request.setAccessType(getRangerAccessType(accessType));
@@ -198,7 +199,7 @@ public class RangerServiceYarn extends RangerBaseService {
 	 public HashMap<String, Object> validateConfig() throws Exception {
 	  	// TODO: connect to YARN resource manager; throw Exception on failure
 	 }
-	 
+
 	 public List<String> lookupResource(ResourceLookupContext context) throws Exception {
 	  	// TODO: retrieve the resource list from YARN resource manager using REST API
 	 }
@@ -222,11 +223,10 @@ Ranger插件在初始化的时候会读取以下文件，也请确保以下文�
 Ranger插件需要以下配置才能正常运行，这些配置属性通常在ranger-&lt;serviceType&gt;-security.xml中。
 
 | 配置 | 默认值  |  备注  |
-| :------: |:----:| :--------:| 
+| :------: |:----:| :--------:|
 | ranger.plugin.&lt;serviceType&gt;.service.name | No default value. This configuration must be provided. | Name of the service containing policies for the plugin |
 | ranger.plugin.&lt;serviceType&gt;.policy.source.impl | org.apache.ranger.admin.client.RangerAdminRESTClient | Name of the class used to retrieve policies. |
 | ranger.plugin.&lt;serviceType&gt;.policy.rest.url | No default value. | URL to Ranger Admin |
 | ranger.plugin.&lt;serviceType&gt;.policy.rest.ssl.config.file | No default value. This configuration must be provided if SSL is enabled between plugin and Ranger Admin. | Path to the file containing SSL details to contact Ranger Admin |
 | ranger.plugin.&lt;serviceType&gt;.policy.cache.dir | No default value. If no valid value is specified, local caching of policies will not be done. |Directory where Ranger policies are cached after successful retrieval from the source |
 | ranger.plugin.&lt;serviceType&gt;.policy.pollIntervalMs | 30000 | How often to poll for changes in policies? |
-

@@ -6,7 +6,7 @@ tags:
  - yarn
 categories:
  - 翻译文章
-
+thumbnail: /images/bigdata.png
 ---
 
 如果你正计划使用HDP的发行版，那么你可以使用Ambari和Apache Slider来执行基于YARN的Presto的自动安装和集成，在安装过程中，Apache Slider和Presto的包都会被安装。

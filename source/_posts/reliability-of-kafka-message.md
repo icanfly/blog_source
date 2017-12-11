@@ -1,11 +1,12 @@
 ---
 title: kafka消息可靠性
 date: 2017-01-15 20:09:04
-tags: 
+tags:
 - kafka
 - 大数据
 categories:
  - 原创文章
+thumbnail: /images/kafka.png
 ---
 
 
@@ -27,8 +28,8 @@ kafka新版client(0.10.x)使用java重新实现。使用的是异步方式发送
 
 设置失败重试的次数为一个很大的数值,如Integer.MAX_VALUE，对应properties的设置为：
 
-| 配置        | 默认值   | 建议值  | 
-| :--------: |:--------:| :-----:| 
+| 配置        | 默认值   | 建议值  |
+| :--------: |:--------:| :-----:|
 | retries	 | 0	    | Integer.MAX_VALUE |
 
 ## 消息异步转同步
@@ -43,8 +44,8 @@ RecordMetadata metadata = future.get(); //等待发送结果返回
 ## 顺序消息
 kafka默认情况下是批量发送，批量发送存在消息积累再发送的过程，为了达到消息send后立刻发送到broker的要求，对应properties设置：
 
-| 配置        | 默认值   | 建议值  | 
-| :--------: |:--------:| :-----:| 
+| 配置        | 默认值   | 建议值  |
+| :--------: |:--------:| :-----:|
 | max.in.flight.requests.per.connection	 | 5	    | 1 |
 
 其中max.in.flight.requests.per.connection以及retries主要应用于顺序消息场景，顺序场景中需要设置为：
@@ -105,8 +106,7 @@ while (true) {
 broker的刷盘时机主要是以下两个参数控制：
 log.flush.interval.ms                  日志刷盘的时间间隔，每隔多少时间将消息刷到磁盘上
 log.flush.interval.messages      日志刷盘的消息量，每积累多少条消息将消息刷到磁盘上
-     
+
 ## 副本数
 在创建消息Topic的时候需要指定消息的副本数  replicas
-一般建议设置成3保证消息的可靠，再结合客户端发送方的ack参数，当ack参数设置为0表示不等待broker响应就发送下一条消息，当ack设置为1则表示需要等待leader响应，当ack设置为all则表示需要等待所有的replicas ISR都响应后才返回响应，其中all是最高可靠级别了，但是同时也降低了吞吐率。    
-
+一般建议设置成3保证消息的可靠，再结合客户端发送方的ack参数，当ack参数设置为0表示不等待broker响应就发送下一条消息，当ack设置为1则表示需要等待leader响应，当ack设置为all则表示需要等待所有的replicas ISR都响应后才返回响应，其中all是最高可靠级别了，但是同时也降低了吞吐率。

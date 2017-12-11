@@ -6,6 +6,7 @@ tags:
  - ORM
 categories:
  - 原创文章
+thumbnail: /images/mybatis.png
 ---
 
 今天又因为精心大意犯一个错，而且以前也已经遇到过，但是没有进行总结

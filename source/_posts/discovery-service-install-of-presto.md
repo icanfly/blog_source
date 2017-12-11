@@ -6,6 +6,7 @@ tags:
  - 大数据
 categories:
  - 原创文章
+thumbnail: /images/bigdata.png
 ---
 
 # Presto的运行机制
@@ -114,7 +115,7 @@ coordinator和worker都会将自身注册到这个服务发现地址上，供彼
      以上面的配置中，集群中有两个节点，并指出了两个节点的节点id信息，以及他们的通信地址`properties.http`等信息，有了这份信息，集群中的各节点就知道如何同其它节点进行数据交互与同步了。
 
   3. 运行集群
-  
+
      在集群每个节点的安装目录下bin目录中运行: ./launcher start进行服务的启动， ./launcher stop 进行服务的停止 ./launcher restart 进行服务的重启
 
   4. 验证服务

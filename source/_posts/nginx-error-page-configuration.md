@@ -5,6 +5,7 @@ tags:
  - nginx
 categories:
  - 原创文章
+thumbnail: /images/nginx.png
 ---
 
 今天偶然访问了一个线上应用不存在的url，应用报错，出现了乱码。

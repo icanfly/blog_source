@@ -5,7 +5,7 @@ tags:
  - linux
 categories:
  - 转载文章
-
+thumbnail: /images/linux.png
 date: 2016-03-05 18:34:00
 
 
@@ -21,7 +21,7 @@ date: 2016-03-05 18:34:00
  语法：rpm -q 软件名
  举例：[root@localhost beinan]# rpm -q gaim
  gaim-1.3.0-1.fc4 　　
-   
+
 2. 查看系统中所有已经安装的包，要加 -a 参数
   [root@localhost RPMS]# rpm -qa
   如果分页查看，再加一个管道 |和more命令；

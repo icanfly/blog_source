@@ -6,6 +6,7 @@ tags:
  - 大数据
 categories:
  - 原创文章
+thumbnail: /images/kafka.png
 ---
 
 
@@ -54,27 +55,27 @@ kafka-manager.zkhosts="172.19.11.197:2181"
 以上ZK地址根据实际情况修改成合适的地址。
 
 # 启动
-bin目录启动，./kafka-manger 
+bin目录启动，./kafka-manger
 
 # kafka-manger特性研究
 | 功能模块        | 功能点           | 是否具备  | 备注 |
-| :-------------: |:-------------:| :-----:| :----:| 
-| 集群管理       | 添加集群       | √ | | 
-|       | 修改集群      |   √ | | 
-|       | 启/禁用集群      |   √ | | 
-|       | 删除集群      |   √ | | 
-|       | 集群列表      |   √ | | 
-| Broker管理 | Broker列表 |   √ | [指标](#metrics1)| 
-|       | Broker详情      |   √ | 消息总量/Topic列表| 
-| Topic管理 | Topic创建 |   √ | | 
-|       | Topic列表      |   √ |  [指标](#metrics2)| 
-|       | Topic详情      |   √ | | 
-|       | Topic删除      |   √ | | 
-|       | 分区调整      |   √ | | 
-|       | 分区信息      |   √ | | 
-| 订阅管理 | Consumer列表 |   √ | 需要JMX开启支持 | 
+| :-------------: |:-------------:| :-----:| :----:|
+| 集群管理       | 添加集群       | √ | |
+|       | 修改集群      |   √ | |
+|       | 启/禁用集群      |   √ | |
+|       | 删除集群      |   √ | |
+|       | 集群列表      |   √ | |
+| Broker管理 | Broker列表 |   √ | [指标](#metrics1)|
+|       | Broker详情      |   √ | 消息总量/Topic列表|
+| Topic管理 | Topic创建 |   √ | |
+|       | Topic列表      |   √ |  [指标](#metrics2)|
+|       | Topic详情      |   √ | |
+|       | Topic删除      |   √ | |
+|       | 分区调整      |   √ | |
+|       | 分区信息      |   √ | |
+| 订阅管理 | Consumer列表 |   √ | 需要JMX开启支持 |
 |       | Consumer详情      |   √ | | |
-| 权限管理 | 登录 |   √ | 提供basic auth，后台可配置用户名、密码登录 | 
+| 权限管理 | 登录 |   √ | 提供basic auth，后台可配置用户名、密码登录 |
 
 
 <span id = "metrics1">
@@ -85,7 +86,7 @@ bin目录启动，./kafka-manger
  3. Bytes out /sec
  4. Bytes rejected /sec
  5. Failed fetch request /sec
- 6. Failed produce request /sec	
+ 6. Failed produce request /sec
 
  ** 需要Broker开启JMX **
 </span>
@@ -101,7 +102,7 @@ bin目录启动，./kafka-manger
  6. Preferred Replicas %  （）
  7. Brokers Skewed % （Broker 均衡率）
  8. Brokers Spread % （Broker  扩散率）
- 9. Under-replicated % （处于同步状态的比率）	
+ 9. Under-replicated % （处于同步状态的比率）
 
  ** 需要JMX开启支持 **
 </span>

@@ -8,7 +8,7 @@ tags:
  - 参与开源
 categories:
  - 原创文章
-
+thumbnail: /images/bigdata.png
 ---
 
 # 前言
@@ -54,7 +54,7 @@ def restart(self, env):
     Feel free to override restart() method with your implementation.
     For client components we call install
     """
-     
+
     //此处省略N行
 
     service_name = config['serviceName'] if config is not None and 'serviceName' in config else None
@@ -95,7 +95,7 @@ def status(self, env):
         except ExecutionFailed as ef:
             if ef.code == 3: #等于3表示Presto节点未运行
                 #这里只能抛出这个异常，这个异常在Ambari的框架中会被捕获并被正确理解和处理
-                raise ComponentIsNotRunning("ComponentIsNotRunning") 
+                raise ComponentIsNotRunning("ComponentIsNotRunning")
             else:
                 raise ef
 ```
@@ -122,7 +122,7 @@ def start(self, env):
 ```
 ## 问题2方案：进行类型转换
 
-修改下该函数： 
+修改下该函数：
 ```python
 def start(self, env):
         from params import daemon_control_script, config_properties, \
@@ -161,5 +161,3 @@ def start(self, env):
 提交的社区ISSUE: [ISSUE-28](https://github.com/prestodb/ambari-presto-service/issues/28)
 
 我的修复PR: [PULL-29](https://github.com/prestodb/ambari-presto-service/pull/29)
-
-

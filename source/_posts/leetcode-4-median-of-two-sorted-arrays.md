@@ -5,7 +5,7 @@ tags:
  - 算法
 categories:
  - leetcode
-
+thumbnail: /images/leetcode.png
 ---
 
 # 题目
@@ -44,12 +44,12 @@ class Solution {
         int idx1Max = nums1.length;
         int idx2Max = nums2.length;
         int total = idx1Max + idx2Max;
-        
+
         int[] middles = (total % 2) == 0 ? (new int[]{total / 2,total / 2 + 1} ) : (new int[]{total / 2 + 1});
         int counter = 1;
         int num = 0;
         int median = 0;
-        
+
         while(idx1 < idx1Max || idx2 < idx2Max){
             if(idx1 < idx1Max && idx2 < idx2Max){
                 if(nums1[idx1] > nums2[idx2]){
@@ -68,8 +68,8 @@ class Solution {
             }else{
                 throw new RuntimeException("can't reach here");
             }
-            
-    
+
+
             if(middles.length == 1 && counter == middles[0]){
                 return (double) num;
             }else if(middles.length == 2){
@@ -80,14 +80,14 @@ class Solution {
                     return (double) median / 2;
                 }
             }
-            
+
             counter++;
-            
-            
+
+
         }
-        
+
         return 0;
-        
+
     }
 }
 ```

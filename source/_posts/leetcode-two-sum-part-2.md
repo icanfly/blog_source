@@ -5,7 +5,7 @@ tags:
  - 算法
 categories:
  - leetcode
-
+thumbnail: /images/leetcode.png
 ---
 
 给定一个已经按升序排序的整数数组，找到两个数字，使它们相加到一个特定的目标数。
@@ -28,7 +28,7 @@ class Solution {
         for(int i=0;i<numbers.length;++i){
             indexMap.put(numbers[i],i);
         }
-        
+
         for(int i=0;i<numbers.length;++i){
             Integer idx = indexMap.get(target-numbers[i]);
             if(idx != null && i != idx){

@@ -5,6 +5,7 @@ tags:
  - 算法
 categories:
  - leetcode
+thumbnail: /images/leetcode.png
 
 ---
 
@@ -31,15 +32,15 @@ categories:
  */
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        
+
         ListNode root = null;
         ListNode parent = null;
-        
+
         ListNode n1 = l1;
         ListNode n2 = l2;
         int val = 0;
         int carry = 0;
-        
+
         while(true){
             if(n1 == null && n2 == null){
             	//在此情况下两个数各个位数都已经相加完成，只剩最后的进位数
@@ -68,8 +69,8 @@ class Solution {
                 n1 = n1.next;
                 n2 = null;
             }
-            
-            
+
+
             if(root == null){
                 root = new ListNode(val);
                 parent = root;
@@ -79,14 +80,12 @@ class Solution {
                 parent = child;
             }
         }
-        
+
         return root;
     }
-    
+
 }
 
 ```
 
 原文地址：[2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/description/)
-
-

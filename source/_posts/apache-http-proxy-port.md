@@ -20,7 +20,7 @@ apache通过配置虚拟主机：
      ServerName "admin.test.com"
      ProxyRequests Off
      ProxyPass / http://localhost:6808/
-     ProxyPassReverse / http://localhost:6808/     
+     ProxyPassReverse / http://localhost:6808/
 </VirtualHost>
 ```
 
