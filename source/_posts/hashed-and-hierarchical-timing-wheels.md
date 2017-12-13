@@ -5,7 +5,6 @@ tags:
  - timer
 categories:
  - 翻译文章
-thumbnail: /images/time.png
 ---
 
 原文地址：[Hashed and Hierarchical Timing Wheels: Data Structures for the Efficient Implementation of a Timer Facility](https://blog.acolyer.org/2015/11/23/hashed-and-hierarchical-timing-wheels/)

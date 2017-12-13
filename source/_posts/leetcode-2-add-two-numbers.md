@@ -5,7 +5,6 @@ tags:
  - 算法
 categories:
  - leetcode
-thumbnail: /images/leetcode.png
 
 ---
 

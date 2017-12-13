@@ -5,7 +5,6 @@ tags:
  - 算法
 categories:
  - leetcode
-thumbnail: /images/leetcode.png
 ---
 
 给定一个整型数组，以及一个目标数值V，要求返回两个能够相对等于V值的两个数字的索引序列。每个数字只能使用一次。

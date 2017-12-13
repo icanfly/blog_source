@@ -5,7 +5,6 @@ tags:
  - 算法
 categories:
  - leetcode
-thumbnail: /images/leetcode.png
 ---
 
 给定二进制搜索树和目标数字，如果BST中存在两个元素，使得它们的和等于给定的目标，则返回true。

@@ -5,7 +5,6 @@ tags:
  - 算法
 categories:
  - leetcode
-thumbnail: /images/leetcode.png
 ---
 
 给定一个已经按升序排序的整数数组，找到两个数字，使它们相加到一个特定的目标数。
