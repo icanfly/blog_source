@@ -6,7 +6,7 @@ tags:
  - ubuntu
 categories:
  - 转载文章
-thumbnail: /images/linux.png
+thumbnail:
 ---
 
 Instead of using the Virtualbox Guest Addition ISO file, try using the following commands in the terminal on the guest Ubuntu Virtual Machine :

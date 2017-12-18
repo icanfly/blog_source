@@ -7,7 +7,7 @@ tags:
  - vim
 categories:
  - 转载文章
-thumbnail: /images/linux.png
+thumbnail:
 ---
 
 yum install vim-X11 vim-common vim-enhanced vim-minimal

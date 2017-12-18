@@ -6,7 +6,7 @@ tags:
  - guava
 categories:
  - 原创文章
-thumbnail: /images/guava.png
+thumbnail:
 ---
 
 这里讲述是的google的Guava类库中的一个需要注意的问题，如下：

@@ -6,7 +6,7 @@ tags:
  - javascript
 categories:
  - 问题记录
-thumbnail: /images/js.png
+thumbnail: 
 
 ---
 

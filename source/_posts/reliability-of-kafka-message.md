@@ -6,7 +6,7 @@ tags:
 - 大数据
 categories:
  - 原创文章
-thumbnail: /images/kafka.png
+thumbnail:
 ---
 
 

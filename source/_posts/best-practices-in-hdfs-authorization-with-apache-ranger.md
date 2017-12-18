@@ -9,7 +9,7 @@ tags:
  - hortonworks
 categories:
  - 翻译文章
-thumbnail: /images/bigdata.png
+thumbnail: 
 ---
 
 HDFS对于任何Hadoop大数据平台来说都是核心组成部分，为了加强对Hadoop平台的数据保护，将安全控制深入到HDFS层是非常有必要的。HDFS本身提供了Kerberos认证，并且提供了基于POSIX风格的权限和HDFS——ACL控制，当然它也可以使用基于Apache Ranger的权限控制体系。

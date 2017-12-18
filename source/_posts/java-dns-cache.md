@@ -5,7 +5,7 @@ tags:
   - java
 categories:
   - 转载文章
-thumbnail: /images/java.png
+thumbnail:
 blogexcerpt:
 ---
 

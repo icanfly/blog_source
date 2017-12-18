@@ -5,7 +5,7 @@ tags:
  - nginx
 cateogries:
  - 转载文章
-thumbnail: /images/nginx.png
+thumbnail:
 ---
 
 ```xml

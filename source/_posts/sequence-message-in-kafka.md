@@ -6,7 +6,7 @@ tags:
 - 大数据
 categories:
  - 原创文章
-thumbnail: /images/kafka.png
+thumbnail:
 ---
 
 顺序消息包括以下两方面：

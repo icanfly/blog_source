@@ -8,7 +8,7 @@ tags:
  - 参与开源
 categories:
  - 原创文章
-thumbnail: /images/bigdata.png
+thumbnail: 
 ---
 
 # 前言

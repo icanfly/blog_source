@@ -7,7 +7,7 @@ tags:
  - bug
 categories:
  - 原创文章
-thumbnail: /images/bigdata.png
+thumbnail: 
 ---
 
 # 需求背景

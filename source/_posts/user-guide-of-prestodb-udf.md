@@ -6,7 +6,7 @@ tags:
 - presto
 categories:
  - 翻译文章
-thumbnail: /images/bigdata.png
+thumbnail:
 ---
 
 # Presto 自定义函数开发（译）

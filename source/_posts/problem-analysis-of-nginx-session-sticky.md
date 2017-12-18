@@ -6,7 +6,7 @@ tags:
  - session
 categories:
  - 原创文章
-thumbnail: /images/nginx.png
+thumbnail: 
 ---
 
 # 常见Session方案

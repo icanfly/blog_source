@@ -7,7 +7,7 @@ tag:
 
 categories:
  - 原创文章
-thumbnail: /images/bigdata.png
+thumbnail:
 ---
 
 我司大数据项目数据查询引擎使用到了presto，但是对于presto本身来说并没有人员及数据权限粒度的权限控制，我在上面做了一层封装。

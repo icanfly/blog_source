@@ -5,7 +5,7 @@ tags:
  - linux
 categories:
  - 转载文章
-thumbnail: /images/linux.png
+thumbnail:
 ---
 linux 下，我们常使用 cd ,grep,vi 等命令，有时候我们要查到这些命令所在的位置，如何做呢？
 

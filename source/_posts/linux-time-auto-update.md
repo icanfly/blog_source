@@ -5,7 +5,7 @@ tags:
  - linux
 categories:
  - 转载文章
-thumbnail: /images/linux.png
+thumbnail:
 ---
 
  1、 一般的Linux发行版都带有ntpdate这个命令，如没有，可以从其它发行版中拷贝一个/usr/local/bin
