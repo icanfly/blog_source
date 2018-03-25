@@ -7,6 +7,7 @@ tags:
 categories:
  - 翻译文章
 thumbnail:
+toc: true
 ---
 
 本文原文：[Solr TTL - Auto-Purging Solr Documents & Ranger Audits](https://community.hortonworks.com/articles/63853/solr-ttl-auto-purging-solr-documents-ranger-audits.html)

@@ -5,7 +5,7 @@ tags:
  - github
 categories:
  - 翻译文章
-
+toc: true
 ---
 
 原文地址：[How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
@@ -337,4 +337,3 @@ Date:   Fri Aug 1 22:57:55 2014 +0200
 # Read Pro Git
 
 [Pro Git](https://git-scm.com/book/en/v2)可以在线免费获得，这太棒了。
-

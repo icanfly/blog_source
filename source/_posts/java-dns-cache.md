@@ -7,6 +7,7 @@ categories:
   - 转载文章
 thumbnail:
 blogexcerpt:
+toc: true
 ---
 
 # jdk1.5和1.5之前版本

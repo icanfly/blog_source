@@ -6,7 +6,8 @@ tags:
  - session
 categories:
  - 原创文章
-thumbnail: 
+thumbnail:
+toc: true
 ---
 
 # 常见Session方案

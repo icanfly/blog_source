@@ -7,7 +7,7 @@ tags:
 
 categories:
  - 原创文章
-
+toc: true
 ---
 
 > 注：本文基于JDK 8，全文中所有的叙述都是基于该版本。
@@ -66,14 +66,14 @@ if (tryRelease(arg))
 
 ```java
 class Mutex implements Lock, java.io.Serializable {
- 
+
     // Our internal helper class
     private static class Sync extends AbstractQueuedSynchronizer {
       // Reports whether in locked state
       protected boolean isHeldExclusively() {
         return getState() == 1;
       }
- 
+
       // Acquires the lock if state is zero
       public boolean tryAcquire(int acquires) {
         assert acquires == 1; // Otherwise unused
@@ -83,7 +83,7 @@ class Mutex implements Lock, java.io.Serializable {
         }
         return false;
       }
- 
+
       // Releases the lock by setting state to zero
       protected boolean tryRelease(int releases) {
         assert releases == 1; // Otherwise unused
@@ -92,10 +92,10 @@ class Mutex implements Lock, java.io.Serializable {
         setState(0);
         return true;
       }
- 
+
       // Provides a Condition
       Condition newCondition() { return new ConditionObject(); }
- 
+
       // Deserializes properly
       private void readObject(ObjectInputStream s)
           throws IOException, ClassNotFoundException {
@@ -103,10 +103,10 @@ class Mutex implements Lock, java.io.Serializable {
         setState(0); // reset to unlocked state
       }
     }
- 
+
     // The sync object does all the hard work. We just forward to it.
     private final Sync sync = new Sync();
- 
+
     public void lock()                { sync.acquire(1); }
     public boolean tryLock()          { return sync.tryAcquire(1); }
     public void unlock()              { sync.release(1); }
@@ -127,20 +127,20 @@ class Mutex implements Lock, java.io.Serializable {
 
 ```java
 class BooleanLatch {
- 
+
     private static class Sync extends AbstractQueuedSynchronizer {
       boolean isSignalled() { return getState() != 0; }
- 
+
       protected int tryAcquireShared(int ignore) {
         return isSignalled() ? 1 : -1;
       }
- 
+
       protected boolean tryReleaseShared(int ignore) {
         setState(1);
         return true;
       }
     }
- 
+
     private final Sync sync = new Sync();
     public boolean isSignalled() { return sync.isSignalled(); }
     public void signal()         { sync.releaseShared(1); }
@@ -149,6 +149,3 @@ class BooleanLatch {
     }
   }
  ```
-
-
-

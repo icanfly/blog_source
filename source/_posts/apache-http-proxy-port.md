@@ -7,7 +7,6 @@ tags:
  - http
 catagories:
  - 原创文章
-
 ---
 
 apache+jetty转发配置下，jetty下应用获取request.getServerPort()获取到的是jetty的端口，而非apache入口的端口，情形如下：

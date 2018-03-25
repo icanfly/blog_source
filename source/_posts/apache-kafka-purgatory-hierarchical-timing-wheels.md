@@ -6,6 +6,7 @@ tags:
  - timer
 categories:
  - 翻译文章
+toc: true
 ---
 
 原文地址：[Apache Kafka, Purgatory, and Hierarchical Timing Wheels](https://www.confluent.io/blog/apache-kafka-purgatory-hierarchical-timing-wheels/)

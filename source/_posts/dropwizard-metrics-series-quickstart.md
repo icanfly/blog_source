@@ -4,6 +4,7 @@ tags:
  - metrics
 categories:
  - 翻译文章
+toc: true
 ---
 
 
@@ -62,7 +63,7 @@ ConsoleReporter reporter = ConsoleReporter.forRegistry(metrics)
 ```
 
 so，完整的示例看起来是这个样子的：
-```java 
+```java
 package sample;
   import com.codahale.metrics.*;
   import java.util.concurrent.TimeUnit;
@@ -295,6 +296,3 @@ reporter.start();
 - SLF4J loggers, using Slf4jReporter from metrics-core
 - Ganglia, using GangliaReporter from metrics-ganglia
 - Graphite, using GraphiteReporter from metrics-graphite
-
-
-

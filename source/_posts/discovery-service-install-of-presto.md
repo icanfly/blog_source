@@ -6,7 +6,8 @@ tags:
  - 大数据
 categories:
  - 原创文章
-thumbnail: 
+thumbnail:
+toc: true
 ---
 
 # Presto的运行机制

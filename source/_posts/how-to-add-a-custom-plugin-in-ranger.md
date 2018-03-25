@@ -6,7 +6,8 @@ tags:
 - ranger
 categories:
  - 翻译文章
-thumbnail: 
+thumbnail:
+toc: true
 ---
 
 >英文链接：https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=53741207

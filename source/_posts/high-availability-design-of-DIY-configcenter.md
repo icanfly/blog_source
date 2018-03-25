@@ -5,7 +5,7 @@ tags:
  - DIY
 categories:
  - 原创文章
-
+toc: true
 ---
 
 # 前言
@@ -25,11 +25,11 @@ categories:
 
 
 
-    Operator    -------->        Web主控台               ------->     MySQL Master                 
-                                    |                                     |                      
-						         (notify)                               (sync)                  
-						            |                                     |                     
-						            ----------|                           | 
+    Operator    -------->        Web主控台               ------->     MySQL Master
+                                    |                                     |
+						         (notify)                               (sync)
+						            |                                     |
+						            ----------|                           |
 						                      |                         ---------------------
 	SDK Client ---（Load Banlancer）----> API Server Cluster               |        |      |
          |                                    |                         slave1   slave2  slave3 ...
@@ -79,4 +79,3 @@ API服务器提供给配置中心SDK配置拉取服务，它们之间会存在�
 - 配置数据存储高可用
 - API服务器高可用
 - 客户端容灾设计
-

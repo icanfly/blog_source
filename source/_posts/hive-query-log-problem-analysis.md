@@ -7,7 +7,8 @@ tags:
  - bug
 categories:
  - 原创文章
-thumbnail: 
+thumbnail:
+toc: true
 ---
 
 # 需求背景

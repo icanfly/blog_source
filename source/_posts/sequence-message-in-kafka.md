@@ -7,6 +7,7 @@ tags:
 categories:
  - 原创文章
 thumbnail:
+toc: true
 ---
 
 顺序消息包括以下两方面：

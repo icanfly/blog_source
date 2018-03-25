@@ -5,7 +5,7 @@ tags:
  - 参与开源
 categories:
  - 原创文章
-
+toc: true
 ---
 
 最近在做一款大数据查询系统，该系统提供给数据分析人员一个用户交互界面，让用户提供SQL语言进行交互查询，前台应用提供一些辅助功能，这样的数据查询系统要优于通过纯console的方式进行查询，查询平台提供了用户管理，权限管理，交互易用性扩展，多引擎框架支持等。
@@ -76,7 +76,7 @@ public static final String LIMIT_REPR_2 = "^(.|[ \\f\\n\\r\\t\\v])+\\s+limit\\s+
 
 # 实现
 
-以下代码仅作参考，实则在某些sql条件下会有性能问题 
+以下代码仅作参考，实则在某些sql条件下会有性能问题
 如果有更好的正则表达式的写法，欢迎联系我
 
 ```java
@@ -188,7 +188,7 @@ select * from (select a.id as userid,a.name as username from a left join b on a.
   如果你碰到了这个错误，尝试重写正则表达式，或者分为几个子表达式，然后分别单独执行。后者有时设置会提高性能。
 
  - 同时CPU开始飙高到了90%，NFA的回缩确实被验证了。以下SQL是导致SQL飙高的其中一条：
- 
+
  `
  select t1.userid,t1.keyword,c.cityname,b.usermobile from( select t.userid,substring(visit_time,1,10) as visit_timeed,current_path, split_part(split_part(url_extract_query(current_url),'kw=',2),'&',1) as keyword from hive.bdc_dwd.dw_fact_galog_pv_daily t where acct_day >= '2017-01-01' and acct_day <= '2017-08-01' and ((t.current_domainname='search.xxx.com' and current_path like '%kw=%')or(t.current_domainname='list.xxx.com' and current_path like '%key=%')) )t1 left join (select user_id,usermobile from hive.bdc_dwd.dw_mb_account_p group by user_id,usermobile)b on t1.userid=b.user_id left join (select user_id,cityname from hive.bdc_dwd.dw_mb_info group by user_id,cityname)c on c.user_id=t1.userid where t1.keyword in('app开发','微信开发','软件开发','UI设计','手机游戏开发','商城开发','办公系统开发','餐饮系统','教育','直播','支付系统','酒店系统开发','电商系统') group by t1.userid,t1.keyword,c.cityname,b.usermobile
  `
@@ -226,7 +226,7 @@ public class QuerySqlLimiter {
 		String originSql = querySql;
 		querySql = trimDelimiter(querySql).toLowerCase();
 		int length = querySql.length();
-		
+
 		int limitIdx = StringUtils.lastIndexOf(querySql, keyword);
 
 		if (limitIdx == -1) {
@@ -281,6 +281,3 @@ public class QuerySqlLimiter {
  # 总结
 
  以前一直不觉得正则表达式会有什么问题，实际运用中也没有遇到和去理解正则表达式的原理。才导致出现了上面所说的问题，有时候采用比正则表达式更原始更粗暴的方式解决问题可能反而会更加高效，这也许也是自己不精通正则表达式编写的问题，后续需要多多关注。
-
-
-

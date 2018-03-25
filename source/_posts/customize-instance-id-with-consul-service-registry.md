@@ -8,6 +8,7 @@ categories:
   - 原创文章
 thumbnail:
 blogexcerpt:
+toc: true
 ---
 
 # 背景

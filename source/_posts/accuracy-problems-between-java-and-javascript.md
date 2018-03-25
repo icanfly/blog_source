@@ -6,8 +6,8 @@ tags:
  - javascript
 categories:
  - 问题记录
-thumbnail: 
-
+thumbnail:
+toc: true
 ---
 
 在项目中采用了twitter开源的snowflake算法的id生成器，生成的id是一个long型的大数，因数值太大，通过json形式传输到前端后，在js解析时，会丢失精度。
