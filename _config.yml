@@ -102,4 +102,4 @@ deploy:
   message: "deploy"
   repo: 
      github: https://GH_TOKEN@github.com/icanfly/myblog.git,master
-     coding: git@git.coding.net:lpwork/lpwork.git,coding-pages
+## coding: git@git.coding.net:lpwork/lpwork.git,coding-pages
