@@ -4,7 +4,7 @@ tags:
   - rocketmq
 categories:
   - 原创文章
-originContent: >+
+originContent: >-
   最近一段时间在运维部署rocketmq的过程中，启动时频繁报一个奇怪的错：
 
 
@@ -201,7 +201,6 @@ originContent: >+
 
 
   解决方案：叫运维关闭selinux后，情况恢复正常。
-
 toc: false
 author:
 thumbnail:
@@ -336,7 +335,8 @@ public static double getDiskPartitionSpaceUsedPercent(final String path) {
 
 综合以上的现象发现只能是发生了异常，而在异常这里，rocketmq自己吃掉了异常，并返回了-1。
 
+这里个人感觉rocketmq团队在这里处理的方式非常不友好，不仅吃掉了异常而且还返回了一个没意义的值！
+
 而为什么在计算磁盘空间的时候会出现异常呢，目前能想到的一个原因可能是因为安全原因，导致问题出现，而在linux下selinux是产生文件方面安全问题的重要原因。
 
 解决方案：叫运维关闭selinux后，情况恢复正常。
-
