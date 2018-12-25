@@ -101,5 +101,5 @@ deploy:
   type: git
   message: "deploy"
   repo: 
-     github: https://GH_TOKEN@github.com/icanfly/myblog.git,master
+     github: git://GH_TOKEN@github.com/icanfly.github.io.git,master
 ## coding: git@git.coding.net:lpwork/lpwork.git,coding-pages
