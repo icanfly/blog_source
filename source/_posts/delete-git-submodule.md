@@ -1,5 +1,6 @@
 ---
 title: delete-git-submodule
+date: 2018-10-23 23:09:23
 tags:
   - git
 categories:
